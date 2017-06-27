@@ -5,7 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "bcrypt"
 gem "coffee-rails", "~> 4.2"
+gem "config"
+gem "devise"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "puma", "~> 3.0"
@@ -44,6 +47,8 @@ group :test do
   gem "simplecov-rcov", require: false
   gem "simplecov-json"
   gem "shoulda-matchers"
+  gem "faker"
+  gem "guard-rspec"
 end
 
 group :development do
