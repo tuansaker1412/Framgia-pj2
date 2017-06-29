@@ -1,0 +1,17 @@
+<nav>
+  <div class="nav-wrapper purple darken-4">
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><i class="material-icons"><%= t ".search" %></i></li>
+      <li class="input-search">
+        <input placeholder="<%= t ".search_placeholder" %>"
+          id="search" type="text">
+      </li>
+    </ul>
+    <%= link_to t(".mlog"), root_path, class: "brand-logo center" %>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><%= link_to t(".about"), about_path %></li>
+      <li><%= link_to t(".contact"), contact_path %></li>
+      <li><%= link_to t(".social"), home_path %></li>
+    </ul>
+  </div>
+</nav>
