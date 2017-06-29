@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="index center">
+        <h3><%= t ".welcome" %></h3>
+        <h5><%= t ".get_start" %></h5>
+        <%= link_to new_user_session_path, class: "waves-effect waves-light btn deep-purple" do %>
+          <%= t ".sign_in" %>
+          <i class="material-icons left"><%= t ".verified_user" %></i>
+        <% end %>
+        <%= link_to new_user_registration_path, class: "waves-effect waves-light btn black" do %>
+          <%= t ".sign_up" %>
+          <i class="material-icons left"><%= t ".supervisor_account" %></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <hr class="extra-margin">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card medium">
+        <div class="card-image">
+          <img src="https://materializecss.com/images/sample-1.jpg">
+          <span class="card-title"><%= t ".card_title" %></span>
+        </div>
+        <div class="card-content">
+          <p><%= t ".card_content" %></p>
+        </div>
+        <div class="card-action">
+          <a href="#"><%= t ".readmore" %></a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card medium">
+        <div class="card-image">
+          <img src="https://materializecss.com/images/sample-1.jpg">
+          <span class="card-title"><%= t ".card_title" %></span>
+        </div>
+        <div class="card-content">
+          <p><%= t ".card_content" %></p>
+        </div>
+        <div class="card-action">
+          <a href="#"><%= t ".readmore" %></a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card medium">
+        <div class="card-image">
+          <img src="https://materializecss.com/images/sample-1.jpg">
+          <span class="card-title"><%= t ".card_title" %></span>
+        </div>
+        <div class="card-content">
+          <p><%= t ".card_content" %></p>
+        </div>
+        <div class="card-action">
+          <a href="#"><%= t ".readmore" %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
