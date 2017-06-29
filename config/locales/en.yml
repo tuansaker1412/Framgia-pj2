@@ -17,6 +17,11 @@ en:
       contact: "Contact"
       social: "Social"
       search_placeholder: "Search..."
+      log_out: "Log out"
+      log_in: "Log in"
+      sign_up: "Sign up"
+      settings: "Settings"
+      account: "Account"
     modal:
       sign_in: "Sign in"
       email: "Email"
@@ -29,7 +34,7 @@ en:
     index:
       welcome: "Welcome MLOG"
       get_start: "Get started?"
-      sign_in: "Sign in"
+      log_in: "Log in"
       sign_up: "Sign up"
       card_title: "Card Title"
       card_content: "I am a very simple card."
@@ -45,3 +50,43 @@ en:
     home:
       welcome: "Welcome MLOG"
       home: "HOME"
+  devise:
+    registrations:
+      new:
+        sign_up: "Sign up"
+        username: "Username"
+        email: "email"
+        pass: "Password"
+        pass_confirm: "Password Confirmation"
+        create: "Create Account"
+        perm_identity: "perm_identity"
+        vpn_key: "vpn_key"
+        forward: "forward"
+        send: "send"
+        characters_minimum: "characters minimum"
+      edit:
+        update: "Update Profile"
+        username: "Username"
+        email: "email"
+        pass: "Password"
+        pass_confirm: "Password Confirmation"
+        create: "Create Account"
+        perm_identity: "perm_identity"
+        vpn_key: "vpn_key"
+        forward: "forward"
+        current_password: "Current Password"
+        delete_account: "Delete my account"
+        unhappy: "Unhappy?"
+        you_sure: "Are you sure?"
+    sessions:
+      new:
+        log_in: "Log in"
+        email: "email"
+        pass: "Password"
+        send: "send"
+        vpn_key: "vpn_key"
+        remember: "Remember me"
+    shared:
+      links:
+        log_in: "Log in"
+        sign_up: "Sign up"

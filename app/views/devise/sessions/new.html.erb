@@ -1,0 +1,42 @@
+<div class="container col s12">
+  <h2><%= t ".log_in" %></h2>
+  <%= form_for resource, as: resource_name, url: login_path do |f| %>
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix"><%= t ".email" %></i>
+        <%= f.email_field :email, class: "validate", id: "email", autofocus: true %>
+        <%= f.label t ".email", for: "email" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix"><%= t ".vpn_key" %></i>
+        <%= f.password_field :password, class: "validate", id: "password", autocomplete: "off" %>
+        <%= f.label t ".pass", for: "password" %>
+      </div>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="row">
+        <div class="col s6">
+          <%= f.check_box :remember_me, type: "checkbox", id: "test1" %>
+          <%= f.label t(".remember"), for: "test1" %>
+        </div>
+      </div>
+    <% end -%>
+
+    <div class="row">
+      <div class="col s6">
+        <button class="btn waves-effect waves-light">
+          <%= f.submit t(".log_in") %>
+          <i class="material-icons right"><%= t ".send" %></i>
+        </button>
+        <div class="btn waves-effect waves-light purple">
+          <i class="material-icons right"><%= t ".send" %></i>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

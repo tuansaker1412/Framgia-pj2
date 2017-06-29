@@ -11,6 +11,21 @@
       <li><%= link_to t(".about"), about_path %></li>
       <li><%= link_to t(".contact"), contact_path %></li>
       <li><%= link_to t(".social"), home_path %></li>
+      <% if user_signed_in?  %>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><%= link_to t(".settings"), edit_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to t(".log_out"), destroy_user_session_path, method: :delete %></li>
+        </ul>
+        <li>
+          <a class="dropdown-button" href="#" data-activates="dropdown1">
+          <%= t ".account" %>
+          <i class="material-icons right">arrow_drop_down</i></a>
+        </li>
+      <% else %>
+        <li><%= link_to t(".sign_up"), signup_path %></li>
+        <li><%= link_to t(".log_in"), login_path %></li>
+      <% end %>
     </ul>
   </div>
 </nav>
