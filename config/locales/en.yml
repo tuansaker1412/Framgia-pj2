@@ -43,5 +43,12 @@ en:
     home:
       welcome: "Welcome MLOG"
       home: "HOME"
-
-
+  devise:
+    registrations:
+      new:
+        sign_up: "Sign up"
+        username: "Username"
+        email: "Email"
+        pass: "Password"
+        pass_confirm: "Password Confirmation"
+        create: "Create Account"

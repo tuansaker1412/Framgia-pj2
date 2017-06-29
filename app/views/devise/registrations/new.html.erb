@@ -1,0 +1,57 @@
+<div class="container col s12" i>
+  <h2><%= t ".sign_up" %></h2>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">perm_identity</i>
+        <%= f.text_field :name, class: "validate", id: "name", autofocus: true %>
+        <%= f.label t ".username", for: "name" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">email</i>
+        <%= f.email_field :email, class: "validate", id: "email" %>
+        <%= f.label t ".email", for: "email" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">vpn_key</i>
+        <div class="right">
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        </div>
+        <%= f.password_field :password, class: "validate", id: "password" %>
+        <%= f.label t ".pass", for: "password" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">forward</i>
+        <%= f.password_field :password_confirmation, class: "validate",
+          id: "password_confirmation" %>
+        <%= f.label t ".pass_confirm", for: "password_confirmation" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s6">
+        <button class="btn waves-effect waves-light">
+          <%= f.submit t(".create") %>
+          <i class="material-icons right">send</i>
+        </button>
+        <div class="btn waves-effect waves-light purple">
+          <i class="material-icons right">send</i>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
