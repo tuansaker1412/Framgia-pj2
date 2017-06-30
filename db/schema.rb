@@ -61,14 +61,15 @@ ActiveRecord::Schema.define(version: 20170628020106) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "email",                              null: false
-    t.string   "encrypted_password",                 null: false
+    t.string   "email",                               null: false
+    t.string   "encrypted_password",                  null: false
     t.string   "remember_digest"
-    t.boolean  "is_admin",           default: false
+    t.datetime "remember_created_at"
+    t.boolean  "is_admin",            default: false
     t.boolean  "actived"
     t.string   "avatar"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
