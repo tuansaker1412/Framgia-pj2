@@ -41,6 +41,7 @@ en:
       readmore: "Read more"
       verified_user: "verified_user"
       supervisor_account: "supervisor_account"
+      newfeed: "New feed:"
     about:
       welcome: "Welcome MLOG"
       about: "ABOUT"
@@ -90,3 +91,32 @@ en:
       links:
         log_in: "Log in"
         sign_up: "Sign up"
+  shared:
+    user_info:
+      view_my_profile: "View my profile"
+      post: "post"
+    post_form:
+      title: "Title"
+      compose: "Compose new post"
+      post: "Post"
+      mode_edit: "mode_edit"
+      code: "code"
+    error:
+      error: "error"
+  posts:
+    create:
+      success: "Success!"
+      error: "Error!"
+    update:
+      success: "Update success!"
+      error: "Error!"
+    destroy:
+      post_deleted: "Post deleted!"
+      error: "Error!"
+    post:
+      readmore: "Read more"
+    show:
+      mode_edit: "mode_edit"
+      delete: "delete"
+      you_sure: "You sure?"
+      edit: "edit"

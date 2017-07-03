@@ -1,67 +1,86 @@
-<div class="container">
-  <div class="row">
-    <div class="col s12">
-      <div class="card center">
-        <div class="card-content">
-          <h3><%= t ".welcome" %></h3>
-          <h5><%= t ".get_start" %></h5>
+<% if user_signed_in? %>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="col s8">
+          <%= render "shared/post_form", post: @post %>
+          <div class="card">
+            <h4 class="center"><%= t ".newfeed" %></h4>
+            <%= render "shared/feed", feed_items: @feed_items %>
+          </div>
         </div>
-        <div class="card-action">
-          <%= link_to login_path, class: "waves-effect waves-light btn deep-purple" do %>
-            <%= t ".log_in" %>
-            <i class="material-icons left"><%= t ".verified_user" %></i>
-          <% end %>
-          <%= link_to signup_path, class: "waves-effect waves-light btn black" do %>
-            <%= t ".sign_up" %>
-            <i class="material-icons left"><%= t ".supervisor_account" %></i>
-          <% end %>
+        <div class="col s4">
+          <%= render "shared/user_info" %>
         </div>
       </div>
     </div>
   </div>
-  <hr class="extra-margin">
-  <div class="row">
-    <div class="col s12 m4">
-      <div class="card medium">
-        <div class="card-image">
-          <img src="https://materializecss.com/images/sample-1.jpg">
-          <span class="card-title"><%= t ".card_title" %></span>
-        </div>
-        <div class="card-content">
-          <p><%= t ".card_content" %></p>
-        </div>
-        <div class="card-action">
-          <a href="#"><%= t ".readmore" %></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s12 m4">
-      <div class="card medium">
-        <div class="card-image">
-          <img src="https://materializecss.com/images/sample-1.jpg">
-          <span class="card-title"><%= t ".card_title" %></span>
-        </div>
-        <div class="card-content">
-          <p><%= t ".card_content" %></p>
-        </div>
-        <div class="card-action">
-          <a href="#"><%= t ".readmore" %></a>
+<% else %>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card center">
+          <div class="card-content">
+            <h3><%= t ".welcome" %></h3>
+            <h5><%= t ".get_start" %></h5>
+          </div>
+          <div class="card-action">
+            <%= link_to login_path, class: "waves-effect waves-light btn deep-purple" do %>
+              <%= t ".log_in" %>
+              <i class="material-icons left"><%= t ".verified_user" %></i>
+            <% end %>
+            <%= link_to signup_path, class: "waves-effect waves-light btn black" do %>
+              <%= t ".sign_up" %>
+              <i class="material-icons left"><%= t ".supervisor_account" %></i>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col s12 m4">
-      <div class="card medium">
-        <div class="card-image">
-          <img src="https://materializecss.com/images/sample-1.jpg">
-          <span class="card-title"><%= t ".card_title" %></span>
+    <hr class="extra-margin">
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="https://materializecss.com/images/sample-1.jpg">
+            <span class="card-title"><%= t ".card_title" %></span>
+          </div>
+          <div class="card-content">
+            <p><%= t ".card_content" %></p>
+          </div>
+          <div class="card-action">
+            <a href="#"><%= t ".readmore" %></a>
+          </div>
         </div>
-        <div class="card-content">
-          <p><%= t ".card_content" %></p>
+      </div>
+      <div class="col s12 m4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="https://materializecss.com/images/sample-1.jpg">
+            <span class="card-title"><%= t ".card_title" %></span>
+          </div>
+          <div class="card-content">
+            <p><%= t ".card_content" %></p>
+          </div>
+          <div class="card-action">
+            <a href="#"><%= t ".readmore" %></a>
+          </div>
         </div>
-        <div class="card-action">
-          <a href="#"><%= t ".readmore" %></a>
+      </div>
+      <div class="col s12 m4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="https://materializecss.com/images/sample-1.jpg">
+            <span class="card-title"><%= t ".card_title" %></span>
+          </div>
+          <div class="card-content">
+            <p><%= t ".card_content" %></p>
+          </div>
+          <div class="card-action">
+            <a href="#"><%= t ".readmore" %></a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>

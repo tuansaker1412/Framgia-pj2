@@ -1,0 +1,10 @@
+<div class="card center">
+  <div class="card-content">
+    <p><%= image_tag current_user.avatar, size: Settings.users.avatar_size %></p>
+    <h4><%= current_user.name %></h4>
+  </div>
+  <div class="card-action">
+    <span><%= link_to t(".view_my_profile"), current_user %></span>
+    <span><%= pluralize current_user.posts.size, t(".post") %></span>
+  </div>
+</div>
