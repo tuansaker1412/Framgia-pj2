@@ -1,8 +1,14 @@
  <div class="container col s12">
   <h2><%= t ".update" %></h2>
 
+  <p><%= image_tag current_user.avatar, size: Settings.users.avatar_size %></p>
+
   <%= form_for resource, as: resource_name, url: edit_path, html: {method: :put} do |f| %>
     <%= devise_error_messages! %>
+
+    <span class="avatar">
+      <%= f.file_field :avatar %>
+    </span><hr>
 
     <div class="row">
       <div class="input-field col s6">
