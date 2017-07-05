@@ -3,15 +3,16 @@
     <div class="col s12">
       <div class="card">
         <div class="card-content">
+          <h4 class="title"><%= @post.title %></h4>
           <div class="col s12">
             <%= image_tag @post.picture, class: "responsive-img" if @post.picture? %>
           </div>
-          <h4 class="title"><%= @post.title %></h4>
           <span class="content"><%= @post.content %></span><hr>
           <p>
+            <%= t ".author" %>
             <%= image_tag @post.user.avatar, size: Settings.posts.post_avatar %>
             <span class="user"><%= link_to @post.user.name, @post.user %></span>
-            <time class="timeago" datetime="<%= @post.created_at.getutc.iso8601 %>"></time>
+            <time class="timeago" datetime="<%= @posttime %>"></time>
             <% if current_user == @post.user %>
               <div class="fixed-action-btn toolbar">
                 <a class="btn-floating btn-large red">
@@ -35,7 +36,17 @@
             <% end %>
           </p>
         </div>
-        <div class="card-action">
+        <div class="card-comment">
+          <span class="list-comment">
+            <% @post.comments.each do |comment| %>
+              <%= render "comments/comment", comment: comment %>
+            <% end %>
+          </span>
+          <% if user_signed_in? %>
+            <span>
+              <%= render "shared/comment_form", post: @post %>
+            </span>
+          <% end %>
         </div>
       </div>
     </div>

@@ -1,0 +1,4 @@
+<%= form_for [post, post.comments.build] do |f| %>
+  <%= f.text_field :content, class: "comment-input", placeholder: t(".add_comment") %>
+  <%= f.submit t(".comment"), class: "btn", data_edit: "false", id: "submit-btn", post_id: post.id %>
+<% end %>

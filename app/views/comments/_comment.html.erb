@@ -1,0 +1,16 @@
+<div class="show-comment" id="<%= comment.id %>">
+  <%= image_tag comment.user.avatar, size: Settings.posts.post_avatar %>
+  <span class="user"><%= link_to comment.user.name, comment.user %></span>
+  <span class="comment-content-<%= comment.id %>" ><%= comment.content %></span>
+  <% if user_signed_in? && current_user == comment.user %>
+    <div class="drop right">
+      <i class="material-icons right"><%= t ".keyboard_arrow_down" %></i>
+      <ul id="dropdown-<%= comment.id %>" class="box">
+        <li><%= link_to t(".edit"), [comment.post, comment], class: "edit" %></li>
+        <li class="divider"></li>
+        <li><%= link_to t(".delete"), [comment.post, comment], method: :delete, class: "delete" %></li>
+      </ul>
+    </div>
+  <% end %>
+  <p><time class="timeago" datetime="<%= comment.created_at.getutc.iso8601 %>"></time></p>
+</div>

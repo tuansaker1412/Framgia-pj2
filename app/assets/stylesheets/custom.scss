@@ -26,3 +26,23 @@ $purple: #4a148c;
     margin-left: 15px;
   }
 }
+
+.card-comment {
+  margin: 10px;
+}
+
+.comment-content {
+  word-wrap: break-word;
+}
+
+.drop {
+  display: block;
+}
+
+.box {
+  display: none;
+}
+
+.drop:hover .box {
+  display: block;
+}

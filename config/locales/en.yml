@@ -104,6 +104,9 @@ en:
       code: "code"
     error:
       error: "error"
+    comment_form:
+      comment: "Comment"
+      add_comment: "Add comment ..."
   posts:
     create:
       success: "Success!"
@@ -121,6 +124,7 @@ en:
       delete: "delete"
       you_sure: "You sure?"
       edit: "edit"
+      author: "Author : "
   users:
     show:
       name: "Name: "
@@ -129,3 +133,6 @@ en:
       comment: "comment"
       perm_identity: "perm_identity"
       email_icon: "email"
+  comments:
+    comment:
+      keyboard_arrow_down: "keyboard_arrow_down"
