@@ -1,0 +1,13 @@
+<div class="row col s12">
+  <div class="row col s4">
+    <div class="card center">
+      <div class="card-content">
+        <p><%= image_tag @user.avatar, size: Settings.users.avatar_size %></p>
+      </div>
+      <div class="card-action">
+        <h4><%= @user.name %></h4>
+        <h4><%= @user.email %></h4>
+      </div>
+    </div>
+  </div>
+</div>

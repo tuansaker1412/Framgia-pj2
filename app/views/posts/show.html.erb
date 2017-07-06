@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <div class="col s12">
+            <%= image_tag @post.user.avatar %>
+          </div>
+          <h4 class="title"><%= @post.title %></h4>
+          <span class="content"><%= @post.content %></span><hr>
+          <p>
+            <%= image_tag @post.user.avatar, size: Settings.posts.post_avatar %>
+            <span class="user"><%= link_to @post.user.name, @post.user %></span>
+            <time class="timeago" datetime="<%= @post.created_at.getutc.iso8601 %>"></time>
+            <% if current_user == @post.user %>
+              <div class="fixed-action-btn toolbar">
+                <a class="btn-floating btn-large red">
+                  <i class="large material-icons"><%= t ".mode_edit" %></i>
+                </a>
+                <ul>
+                  <li class="waves-effect waves-light">
+                    <%= link_to @post, method: :delete, data: {confirm: t(".you_sure")} do %>
+                      <i class="material-icons"><%= t ".delete" %></i>
+                      <%= t ".delete" %>
+                    <% end %>
+                  </li>
+                  <li class="waves-effect waves-light purple">
+                    <%= link_to edit_post_url do %>
+                      <i class="material-icons"><%= t ".edit" %></i>
+                      <%= t ".edit" %>
+                    <% end %>
+                  </li>
+                </ul>
+              </div>
+            <% end %>
+          </p>
+        </div>
+        <div class="card-action">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

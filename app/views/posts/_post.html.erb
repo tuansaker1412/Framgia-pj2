@@ -1,0 +1,14 @@
+<ul id="post-<%= post.id %>">
+  <div class="col s12">
+    <%= image_tag post.user.avatar, size: Settings.posts.post_picture %>
+  </div>
+  <%= image_tag post.user.avatar, size: Settings.posts.post_avatar %>
+  <span class="user"><%= link_to post.user.name, post.user %></span>
+  <h4 class="title"><%= link_to post.title, post %></h4>
+  <p class="content">
+    <%= post.content.truncate_words Settings.posts.post_truncate %>
+    <%= link_to t(".readmore"), post %>
+  </p>
+  <time class="timeago" datetime="<%= post.created_at.getutc.iso8601 %>"></time>
+  <hr>
+</ul>
