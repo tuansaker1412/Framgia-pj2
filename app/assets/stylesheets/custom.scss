@@ -1,3 +1,6 @@
+$l-blue: #03a9f4;
+$purple: #4a148c;
+
 .extra-margin {
   margin: 1rem 0 2.5rem;
 }
@@ -11,7 +14,15 @@
 }
 
 .pagination {
+  background-color: $l-blue;
+
   a {
     margin-left: 20px;
+  }
+
+  .current {
+    color: $purple;
+    font-weight: bold;
+    margin-left: 15px;
   }
 }

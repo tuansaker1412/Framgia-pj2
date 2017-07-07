@@ -3,6 +3,5 @@ users:
   avatar_size: 150
 posts:
   feed_items: 5
-  post_picture: 500x500
   post_avatar: 50
   post_truncate: 50

@@ -9,4 +9,6 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :content, presence: true
   validates :user_id, presence: true
+
+  mount_uploader :picture, PictureUploader
 end
