@@ -12,6 +12,11 @@
         <%= f.text_area :content, class: "materialize-textarea validate", id: "content" %>
         <%= f.label t ".compose", for: "content" %>
       </div>
+      <div class="input-field">
+        <i class="material-icons prefix"><%= t ".loyalty" %></i>
+        <%= f.text_field :all_tags, class: "validate chip", id: "tag" %>
+        <%= f.label t(".tags"), for: "tag" %>
+      </div>
       <%= f.file_field :picture, class: "file-field input-field" %>
     </div>
     <div class="card-action">

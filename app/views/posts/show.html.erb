@@ -7,6 +7,11 @@
           <div class="col s12">
             <%= image_tag @post.picture, class: "responsive-img" if @post.picture? %>
           </div>
+          <h4 class="title"><%= @post.title %></h4>
+          <p>
+            <i class="material-icons prefix"><%= t ".loyalty" %></i>
+            <%= t ".tags" %><%= @post.all_tags %>
+          </p>
           <span class="content"><%= @post.content %></span><hr>
           <p>
             <%= t ".author" %>
