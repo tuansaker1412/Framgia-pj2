@@ -1,6 +1,6 @@
 <ul id="post-<%= post.id %>">
   <div class="col s12">
-    <%= image_tag post.user.avatar, size: Settings.posts.post_picture %>
+    <%= image_tag post.picture, class: "responsive-img" if post.picture? %>
   </div>
   <%= image_tag post.user.avatar, size: Settings.posts.post_avatar %>
   <span class="user"><%= link_to post.user.name, post.user %></span>

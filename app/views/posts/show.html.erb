@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-content">
           <div class="col s12">
-            <%= image_tag @post.user.avatar %>
+            <%= image_tag @post.picture, class: "responsive-img" if @post.picture? %>
           </div>
           <h4 class="title"><%= @post.title %></h4>
           <span class="content"><%= @post.content %></span><hr>

@@ -13,6 +13,7 @@ gem "faker"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "jquery-turbolinks"
+gem "kaminari"
 gem "material_icons"
 gem "materialize-sass"
 gem "puma", "~> 3.0"
@@ -21,7 +22,6 @@ gem "sass-rails", "~> 5.0"
 gem "sqlite3"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
-gem "will_paginate"
 
 group :development, :test do
   gem "byebug", platform: :mri

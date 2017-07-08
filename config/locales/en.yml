@@ -95,6 +95,7 @@ en:
     user_info:
       view_my_profile: "View my profile"
       post: "post"
+      hello: "Hello, "
     post_form:
       title: "Title"
       compose: "Compose new post"
@@ -120,3 +121,11 @@ en:
       delete: "delete"
       you_sure: "You sure?"
       edit: "edit"
+  users:
+    show:
+      name: "Name: "
+      email: "Email: "
+      post: "post"
+      comment: "comment"
+      perm_identity: "perm_identity"
+      email_icon: "email"

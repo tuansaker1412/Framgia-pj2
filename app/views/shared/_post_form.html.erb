@@ -12,6 +12,7 @@
         <%= f.text_area :content, class: "materialize-textarea validate", id: "content" %>
         <%= f.label t ".compose", for: "content" %>
       </div>
+      <%= f.file_field :picture, class: "file-field input-field" %>
     </div>
     <div class="card-action">
       <%= f.submit t(".post"), class: "btn light-blue" %>
