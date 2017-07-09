@@ -102,6 +102,8 @@ en:
       post: "Post"
       mode_edit: "mode_edit"
       code: "code"
+      tags: "Tags"
+      loyalty: "loyalty"
     error:
       error: "error"
     comment_form:
@@ -125,6 +127,8 @@ en:
       you_sure: "You sure?"
       edit: "edit"
       author: "Author : "
+      loyalty: "loyalty"
+      tags: "Tags: "
   users:
     show:
       name: "Name: "
