@@ -9,9 +9,16 @@
           <%= t ".email" %><%= @user.email %></h5>
         <p><%= pluralize @user.posts.size, t(".post") %></p>
         <p><%= pluralize @user.comments.size, t(".comment") %></p>
+        <% if user_signed_in? %>
+          <div class="follow-form">
+            <%= render "users/follow_form" %>
+          </div>
+        <% end %>
+        <section class="stats">
+          <%= render "shared/stats" %>
+        </section>
       </div>
       <div class="card-action">
-
       </div>
     </div>
     <div class="card">

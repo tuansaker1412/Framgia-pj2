@@ -1,6 +1,7 @@
 users:
   avatar_default: "avatar-gg.png"
   avatar_size: 150
+  follow_size: 10
 posts:
   feed_items: 5
   post_avatar: 50
