@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
+  scope :sort_user, ->{order name: :asc}
+
   validates :name, presence: true
 
   def load_feed

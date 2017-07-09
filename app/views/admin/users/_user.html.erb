@@ -1,0 +1,11 @@
+<tr>
+  <td><%= image_tag user.avatar, size: Settings.users.admin_ava_user%></td>
+  <td><%= link_to user.name, user, class: "btn light-blue" %></td>
+  <td><%= user.email %></td>
+  <td>
+    <% if current_user != user && current_user.is_admin? %>
+     <%= link_to t(".delete"), user, class: "btn waves-effect waves-light red",
+        method: :delete, data: {confirm: t(".you_sure")} %>
+    <% end %>
+  </td>
+</tr>

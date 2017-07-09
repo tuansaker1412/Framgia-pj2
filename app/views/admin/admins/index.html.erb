@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="center">
+    <h5><%= t ".all_user" %><%= @user.size %><%= t ".users" %></h5>
+    <h5><%= link_to t(".manager_post"), admin_posts_path %></h5>
+    <div class="card">
+      <table class="highlight">
+        <thead>
+          <tr>
+            <th><%= t ".avatar" %></th>
+            <th><%= t ".username" %></th>
+            <th><%= t ".email" %></th>
+            <th><%= t ".delete" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if @users.any? %>
+            <ul class="users-all">
+              <%= render @users %>
+            </ul>
+          <% end %>
+        </tbody>
+      </table>
+      <%= paginate @users %>
+    </div>
+  </div>
+</div>

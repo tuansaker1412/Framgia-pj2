@@ -2,7 +2,10 @@ users:
   avatar_default: "avatar-gg.png"
   avatar_size: 150
   follow_size: 10
+  admin_index_size: 10
+  admin_ava_user: 50
 posts:
   feed_items: 5
   post_avatar: 50
   post_truncate: 50
+  admin_post_size: 10
