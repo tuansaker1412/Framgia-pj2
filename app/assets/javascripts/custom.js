@@ -4,6 +4,6 @@ $(document).ready(function(){
   }, 2000);
 });
 
-$(document).on('turbolinks:load', function(){
+$(document).ready(function(){
   $('time.timeago').timeago();
 });

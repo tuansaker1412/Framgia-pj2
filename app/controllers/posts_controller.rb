@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @posttime = @post.created_at.getutc.iso8601
   end
 
   def edit
