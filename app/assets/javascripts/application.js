@@ -17,3 +17,4 @@
 //= require materialize-sprockets
 //= require_tree .
 //= require time_ago
+//= require social-share-button

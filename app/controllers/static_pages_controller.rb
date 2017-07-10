@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
+    @posts = Post.sort_feed.page(params[:page]).per Settings.posts.post_index
     return unless user_signed_in?
     @post = current_user.posts.build
     feed_items_load = current_user.load_feed.sort_feed.page(params[:page])

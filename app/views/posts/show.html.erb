@@ -17,27 +17,30 @@
             <%= t ".author" %>
             <%= image_tag @post.user.avatar, size: Settings.posts.post_avatar %>
             <span class="user"><%= link_to @post.user.name, @post.user %></span>
+            <%= social_share_button_tag(@post.title, url: request.original_url) %>
             <time class="timeago" datetime="<%= @posttime %>"></time>
-            <% if current_user == @post.user || current_user.is_admin? %>
-              <div class="fixed-action-btn toolbar">
-                <a class="btn-floating btn-large red">
-                  <i class="large material-icons"><%= t ".mode_edit" %></i>
-                </a>
-                <ul>
-                  <li class="waves-effect waves-light">
-                    <%= link_to @post, method: :delete, data: {confirm: t(".you_sure")} do %>
-                      <i class="material-icons"><%= t ".delete" %></i>
-                      <%= t ".delete" %>
-                    <% end %>
-                  </li>
-                  <li class="waves-effect waves-light purple">
-                    <%= link_to edit_post_url do %>
-                      <i class="material-icons"><%= t ".edit" %></i>
-                      <%= t ".edit" %>
-                    <% end %>
-                  </li>
-                </ul>
-              </div>
+            <% if user_signed_in? %>
+              <% if current_user == @post.user || current_user.is_admin? %>
+                <div class="fixed-action-btn toolbar">
+                  <a class="btn-floating btn-large red">
+                    <i class="large material-icons"><%= t ".mode_edit" %></i>
+                  </a>
+                  <ul>
+                    <li class="waves-effect waves-light">
+                      <%= link_to @post, method: :delete, data: {confirm: t(".you_sure")} do %>
+                        <i class="material-icons"><%= t ".delete" %></i>
+                        <%= t ".delete" %>
+                      <% end %>
+                    </li>
+                    <li class="waves-effect waves-light purple">
+                      <%= link_to edit_post_url do %>
+                        <i class="material-icons"><%= t ".edit" %></i>
+                        <%= t ".edit" %>
+                      <% end %>
+                    </li>
+                  </ul>
+                </div>
+              <% end %>
             <% end %>
           </p>
         </div>
