@@ -22,6 +22,7 @@ en:
       sign_up: "Sign up"
       settings: "Settings"
       account: "Account"
+      admin: "Admin"
     modal:
       sign_in: "Sign in"
       email: "Email"
@@ -158,6 +159,29 @@ en:
       comment: "comment"
       perm_identity: "perm_identity"
       email_icon: "email"
+    destroy:
+      deleted: "User deleted"
+      fail: "Fail!"
   comments:
     comment:
       keyboard_arrow_down: "keyboard_arrow_down"
+  admin:
+    admins:
+      index:
+        not_admin: "Unaccessible"
+        all_user: "All User: "
+        users: " users"
+        manager_post: "Manager Post"
+        avatar: "Avatar"
+        username: "Username"
+        email: "Email"
+        delete: "Delete"
+      allpost:
+        allpost: "All Post: "
+        posts: " posts"
+        manager_user: "Manager User"
+        title: "Title"
+    users:
+      user:
+        delete: "Delete"
+        you_sure: "You sure?"

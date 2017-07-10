@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="center">
+    <h5><%= t ".allpost" %><%= @post.size %><%= t ".posts" %></h5>
+    <h5><%= link_to t(".manager_user"), admin_root_path %></h5>
+  </div>
+  <div class="card">
+    <table class="highlight">
+      <thead>
+        <tr>
+          <th><%= t ".title" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @posts.any? %>
+          <ul class="posts-all">
+            <%= render @posts %>
+          </ul>
+        <% end %>
+      </tbody>
+    </table>
+   <%= paginate @posts %>
+  </div>
+</div>

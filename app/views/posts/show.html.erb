@@ -18,7 +18,7 @@
             <%= image_tag @post.user.avatar, size: Settings.posts.post_avatar %>
             <span class="user"><%= link_to @post.user.name, @post.user %></span>
             <time class="timeago" datetime="<%= @posttime %>"></time>
-            <% if current_user == @post.user %>
+            <% if current_user == @post.user || current_user.is_admin? %>
               <div class="fixed-action-btn toolbar">
                 <a class="btn-floating btn-large red">
                   <i class="large material-icons"><%= t ".mode_edit" %></i>
