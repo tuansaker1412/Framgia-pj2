@@ -2,6 +2,9 @@
   <div class="card-content">
     <p><%= image_tag current_user.avatar, size: Settings.users.avatar_size %></p>
     <h5><%= t ".hello" %><%= current_user.name %></h5>
+    <section class="stats">
+      <%= render "shared/stats" %>
+    </section>
   </div>
   <div class="card-action">
     <span><%= link_to t(".view_my_profile"), current_user %></span>

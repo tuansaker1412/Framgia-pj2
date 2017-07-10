@@ -109,6 +109,9 @@ en:
     comment_form:
       comment: "Comment"
       add_comment: "Add comment ..."
+    stats:
+      following: "following"
+      followers: "followers"
   posts:
     create:
       success: "Success!"
@@ -131,6 +134,24 @@ en:
       tags: "Tags: "
   users:
     show:
+      name: "Name: "
+      email: "Email: "
+      post: "post"
+      comment: "comment"
+      perm_identity: "perm_identity"
+      email_icon: "email"
+      error: "Error!"
+    following:
+      following: "Following"
+    followers:
+      followers: "Followers"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    show_follow:
+      avatar: "Avatar"
+      username: "Username"
       name: "Name: "
       email: "Email: "
       post: "post"

@@ -6,6 +6,11 @@ class Post < ApplicationRecord
 
   scope :sort_feed, ->{order created_at: :desc}
 
+  scope :load_feed, lambda {|id, following_ids|
+    where "user_id IN (#{following_ids}) OR user_id = :user_id",
+      following_ids: following_ids, user_id: id
+  }
+
   validates :title, presence: true
   validates :content, presence: true
   validates :user_id, presence: true

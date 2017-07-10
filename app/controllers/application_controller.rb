@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
 
   def check_url object
     return if object
-    render file: "public/404.html", layout: false
+    flash[:red] = t ".error"
+    redirect_to root_path
   end
 
   protected
