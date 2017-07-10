@@ -5,4 +5,8 @@ class StaticPagesController < ApplicationController
     feed_items_load = current_user.load_feed.sort_feed.page(params[:page])
     @feed_items = feed_items_load.per Settings.posts.feed_items
   end
+
+  def home
+    @posts = Post.sort_feed.page(params[:page]).per Settings.posts.feed_items
+  end
 end
