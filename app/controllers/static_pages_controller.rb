@@ -9,4 +9,9 @@ class StaticPagesController < ApplicationController
   def home
     @posts = Post.sort_feed.page(params[:page]).per Settings.posts.feed_items
   end
+
+  def search
+    posts_load = Post.search_feed(params[:search])
+    @posts = posts_load.sort_feed.page(params[:page]).per Settings.posts.feed_items
+  end
 end

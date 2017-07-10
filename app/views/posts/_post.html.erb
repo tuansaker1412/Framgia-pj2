@@ -4,7 +4,7 @@
   <h4 class="title"><%= link_to post.title, post %></h4>
   <time class="timeago" datetime="<%= post.created_at.getutc.iso8601 %>"></time>
   <div class="col s12">
-    <%= image_tag post.piture, size: Settings.posts.post_picture, class: "responsive-img" if post.picture? %>
+    <%= image_tag post.picture, size: Settings.posts.post_picture, class: "responsive-img" if post.picture? %>
   </div>
   <p class="content">
     <%= post.content.truncate_words Settings.posts.post_truncate %>
