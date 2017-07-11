@@ -37,49 +37,10 @@
         </div>
       </div>
     </div>
-    <hr class="extra-margin">
     <div class="row">
-      <div class="col s12 m4">
-        <div class="card medium">
-          <div class="card-image">
-            <img src="https://materializecss.com/images/sample-1.jpg">
-            <span class="card-title"><%= t ".card_title" %></span>
-          </div>
-          <div class="card-content">
-            <p><%= t ".card_content" %></p>
-          </div>
-          <div class="card-action">
-            <a href="#"><%= t ".readmore" %></a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card medium">
-          <div class="card-image">
-            <img src="https://materializecss.com/images/sample-1.jpg">
-            <span class="card-title"><%= t ".card_title" %></span>
-          </div>
-          <div class="card-content">
-            <p><%= t ".card_content" %></p>
-          </div>
-          <div class="card-action">
-            <a href="#"><%= t ".readmore" %></a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card medium">
-          <div class="card-image">
-            <img src="https://materializecss.com/images/sample-1.jpg">
-            <span class="card-title"><%= t ".card_title" %></span>
-          </div>
-          <div class="card-content">
-            <p><%= t ".card_content" %></p>
-          </div>
-          <div class="card-action">
-            <a href="#"><%= t ".readmore" %></a>
-          </div>
-        </div>
+      <div class="card col s12">
+        <h5 class="center"><%= t ".realtime" %></h5>
+        <%= render @posts %>
       </div>
     </div>
   </div>

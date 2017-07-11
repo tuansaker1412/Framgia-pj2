@@ -9,3 +9,4 @@ posts:
   post_avatar: 50
   post_truncate: 50
   admin_post_size: 10
+  post_index: 3

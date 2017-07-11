@@ -10,5 +10,6 @@
     <%= post.content.truncate_words Settings.posts.post_truncate %>
     <%= link_to t(".readmore"), post %>
   </p>
+  <%= social_share_button_tag(post.title, url: request.original_url) %>
   <hr>
 </ul>
