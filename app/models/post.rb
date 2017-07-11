@@ -11,10 +11,13 @@ class Post < ApplicationRecord
       following_ids: following_ids, user_id: id
   }
 
+  scope :search_feed, lambda {|q|
+    where "content like '%#{q}%' or title like '%#{q}%'"
+  }
+
   validates :title, presence: true
   validates :content, presence: true
   validates :user_id, presence: true
-
 
   mount_uploader :picture, PictureUploader
 
